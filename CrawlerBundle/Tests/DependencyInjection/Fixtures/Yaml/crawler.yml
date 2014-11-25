@@ -1,0 +1,6 @@
+crawler:
+    crawler_twitter:
+        consumer_key: "BKGUp3NvQzTQAv5CyDrprdB4C"
+        consumer_secret: "8hlrrjOzM3yPL4T64KtqhwfTyuzLllfPdTt7GEMIbCSJIIXRMd"
+        access_token: "934169384-u19PEV7Cq2d0cJEmXnk0YmanXyYAPDDgr6tnmjMf"
+        access_token_secret: "yTacybEicigAHNIc1Bu5yQ76MyxU04NaBon4G0nCP4zOF"

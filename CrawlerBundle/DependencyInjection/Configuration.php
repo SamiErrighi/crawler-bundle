@@ -19,10 +19,28 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('crawler');
-
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->arrayNode('crawler_twitter')
+                    ->children()
+                        ->scalarNode('consumer_key')
+                            ->isRequired()
+                        ->end()
+                        ->scalarNode('consumer_secret')->isRequired()->end()
+                        ->scalarNode('access_token')->isRequired()->end()
+                        ->scalarNode('access_token_secret')->isRequired()->end()
+                    ->end()
+                ->end()
+                ->arrayNode('crawler_insta')
+                    ->children()
+                        ->scalarNode('consumer_key')->isRequired()->end()
+                        ->scalarNode('consumer_secret')->isRequired()->end()
+                        ->scalarNode('access_token')->isRequired()->end()
+                        ->scalarNode('access_token_secret')->isRequired()->end()
+                    ->end()
+                ->end()
+            ->end()
+        ;
 
         return $treeBuilder;
     }
